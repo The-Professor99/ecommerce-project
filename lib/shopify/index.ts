@@ -72,147 +72,146 @@ export async function shopifyFetch<T>({
   variables?: ExtractVariables<T>;
 }): Promise<{ status: number; body: T } | never> {
   try {
-    const firstProduct = {
-      id: 'dklakd',
-      handle: 'dksld',
-      availableForSale: true,
-      title: 'first product',
-      description: 'No much description',
-      descriptionHtml: 'description.link',
-      options: [{ id: 'ddssa', name: 'Option 1', values: ['value 1', 'value 2', 'value 3'] }],
-      priceRange: {
-        maxVariantPrice: {
-          amount: '250',
-          currencyCode: '$'
-        },
-        minVariantPrice: {
-          amount: '200',
-          currencyCode: '$'
-        }
-      },
-      variants: {
-        edges: [{ node: 'node 1' }]
-      },
-      featuredImage: {
-        url: 'ddds',
-        altText: 'alt text',
-        width: '489',
-        height: '489'
-      },
-      images: {
-        edges: [{ node: 'node 1' }]
-      },
-      seo: {
-        title: 'product 1',
-        description: 'no long string'
-      },
-      tags: ['tag 1', 'tag 2'],
-      updatedAt: 'updated today'
-    };
-
-    const secondProduct = {
-      id: 'dklakd',
-      handle: 'dksld',
-      availableForSale: true,
-      title: 'first product',
-      description: 'No much description',
-      descriptionHtml: 'description.link',
-      options: [{ id: 'ddssa', name: 'Option 1', values: ['value 1', 'value 2', 'value 3'] }],
-      priceRange: {
-        maxVariantPrice: {
-          amount: '250',
-          currencyCode: '$'
-        },
-        minVariantPrice: {
-          amount: '200',
-          currencyCode: '$'
-        }
-      },
-      variants: {
-        edges: [{ node: 'node 1' }]
-      },
-      featuredImage: {
-        url: 'ddds',
-        altText: 'alt text',
-        width: '489',
-        height: '489'
-      },
-      images: {
-        edges: [{ node: 'node 1' }]
-      },
-      seo: {
-        title: 'product 1',
-        description: 'no long string'
-      },
-      tags: ['tag 1', 'tag 2'],
-      updatedAt: 'updated today'
-    };
-
-    const thirdProduct = {
-      id: 'dklakd',
-      handle: 'dksld',
-      availableForSale: true,
-      title: 'first product',
-      description: 'No much description',
-      descriptionHtml: 'description.link',
-      options: [{ id: 'ddssa', name: 'Option 1', values: ['value 1', 'value 2', 'value 3'] }],
-      priceRange: {
-        maxVariantPrice: {
-          amount: '250',
-          currencyCode: '$'
-        },
-        minVariantPrice: {
-          amount: '200',
-          currencyCode: '$'
-        }
-      },
-      variants: {
-        edges: [{ node: 'node 1' }]
-      },
-      featuredImage: {
-        url: 'ddds',
-        altText: 'alt text',
-        width: '489',
-        height: '489'
-      },
-      images: {
-        edges: [{ node: 'node 1' }]
-      },
-      seo: {
-        title: 'product 1',
-        description: 'no long string'
-      },
-      tags: ['tag 1', 'tag 2'],
-      updatedAt: 'updated today',
-      edges: []
-    };
-
-    const result = {
-      status: 200,
-      message: 'Retrieved successfully',
-      data: {
-        collection: {
-          products: [firstProduct, secondProduct, thirdProduct]
-        }
-      }
-    };
-    // const result = await fetch(endpoint, {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     'X-Shopify-Storefront-Access-Token': key,
-    //     ...headers
+    // const firstProduct = {
+    //   id: 'dklakd',
+    //   handle: 'dksld',
+    //   availableForSale: true,
+    //   title: 'first product',
+    //   description: 'No much description',
+    //   descriptionHtml: 'description.link',
+    //   options: [{ id: 'ddssa', name: 'Option 1', values: ['value 1', 'value 2', 'value 3'] }],
+    //   priceRange: {
+    //     maxVariantPrice: {
+    //       amount: '250',
+    //       currencyCode: '$'
+    //     },
+    //     minVariantPrice: {
+    //       amount: '200',
+    //       currencyCode: '$'
+    //     }
     //   },
-    //   body: JSON.stringify({
-    //     ...(query && { query }),
-    //     ...(variables && { variables })
-    //   }),
-    //   cache,
-    //   ...(tags && { next: { tags } })
-    // });
+    //   variants: {
+    //     edges: [{ node: 'node 1' }]
+    //   },
+    //   featuredImage: {
+    //     url: 'ddds',
+    //     altText: 'alt text',
+    //     width: '489',
+    //     height: '489'
+    //   },
+    //   images: {
+    //     edges: [{ node: 'node 1' }]
+    //   },
+    //   seo: {
+    //     title: 'product 1',
+    //     description: 'no long string'
+    //   },
+    //   tags: ['tag 1', 'tag 2'],
+    //   updatedAt: 'updated today'
+    // };
 
-    // const body = await result.json();
-    const body = result;
+    // const secondProduct = {
+    //   id: 'dklakd',
+    //   handle: 'dksld',
+    //   availableForSale: true,
+    //   title: 'first product',
+    //   description: 'No much description',
+    //   descriptionHtml: 'description.link',
+    //   options: [{ id: 'ddssa', name: 'Option 1', values: ['value 1', 'value 2', 'value 3'] }],
+    //   priceRange: {
+    //     maxVariantPrice: {
+    //       amount: '250',
+    //       currencyCode: '$'
+    //     },
+    //     minVariantPrice: {
+    //       amount: '200',
+    //       currencyCode: '$'
+    //     }
+    //   },
+    //   variants: {
+    //     edges: [{ node: 'node 1' }]
+    //   },
+    //   featuredImage: {
+    //     url: 'ddds',
+    //     altText: 'alt text',
+    //     width: '489',
+    //     height: '489'
+    //   },
+    //   images: {
+    //     edges: [{ node: 'node 1' }]
+    //   },
+    //   seo: {
+    //     title: 'product 1',
+    //     description: 'no long string'
+    //   },
+    //   tags: ['tag 1', 'tag 2'],
+    //   updatedAt: 'updated today'
+    // };
+
+    // const thirdProduct = {
+    //   id: 'dklakd',
+    //   handle: 'dksld',
+    //   availableForSale: true,
+    //   title: 'first product',
+    //   description: 'No much description',
+    //   descriptionHtml: 'description.link',
+    //   options: [{ id: 'ddssa', name: 'Option 1', values: ['value 1', 'value 2', 'value 3'] }],
+    //   priceRange: {
+    //     maxVariantPrice: {
+    //       amount: '250',
+    //       currencyCode: '$'
+    //     },
+    //     minVariantPrice: {
+    //       amount: '200',
+    //       currencyCode: '$'
+    //     }
+    //   },
+    //   variants: {
+    //     edges: [{ node: 'node 1' }]
+    //   },
+    //   featuredImage: {
+    //     url: 'ddds',
+    //     altText: 'alt text',
+    //     width: '489',
+    //     height: '489'
+    //   },
+    //   images: {
+    //     edges: [{ node: 'node 1' }]
+    //   },
+    //   seo: {
+    //     title: 'product 1',
+    //     description: 'no long string'
+    //   },
+    //   tags: ['tag 1', 'tag 2'],
+    //   updatedAt: 'updated today',
+    //   edges: []
+    // };
+
+    // const result = {
+    //   status: 200,
+    //   message: 'Retrieved successfully',
+    //   data: {
+    //     collection: {
+    //       products: [firstProduct, secondProduct, thirdProduct]
+    //     }
+    //   }
+    // };
+    const result = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Shopify-Storefront-Access-Token': key,
+        ...headers
+      },
+      body: JSON.stringify({
+        ...(query && { query }),
+        ...(variables && { variables })
+      }),
+      cache,
+      ...(tags && { next: { tags } })
+    });
+
+    const body = await result.json();
 
     if (body.errors) {
       throw body.errors[0];

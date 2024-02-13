@@ -1,6 +1,6 @@
 import { GridTileImage } from 'components/grid/tile';
 import getDummyProducts from 'lib/products';
-import type { Product } from 'lib/shopify/types';
+import type { DummyProduct } from 'lib/shopify/types';
 import Link from 'next/link';
 
 function ThreeItemGridItem({
@@ -8,7 +8,7 @@ function ThreeItemGridItem({
   size,
   priority
 }: {
-  item: Product;
+  item: DummyProduct;
   size: 'full' | 'half';
   priority?: boolean;
 }) {

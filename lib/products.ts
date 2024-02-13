@@ -1,11 +1,10 @@
-const firstProduct = {
+import type { DummyProduct } from './shopify/types';
+
+const firstProduct: DummyProduct = {
   id: '2',
-  handle: 'dummy handle',
   availableForSale: true,
   title: 'Quality black bag',
   description: 'Quality black palms',
-  descriptionHtml: '#',
-  options: [{ id: '1', name: 'Option 1', values: ['value 1', 'value 2', 'value 3'] }],
   priceRange: {
     maxVariantPrice: {
       amount: '32000',
@@ -16,34 +15,19 @@ const firstProduct = {
       currencyCode: 'ngn'
     }
   },
-  variants: {
-    edges: [{ node: 'node 1' }]
-  },
   featuredImage: {
     url: '/bag.png',
     altText: 'alt text',
-    width: '489',
-    height: '489'
-  },
-  images: {
-    edges: [{ node: 'node 1' }]
-  },
-  seo: {
-    title: 'product 2',
-    description: 'dummy description'
-  },
-  tags: ['tag 1', 'tag 2'],
-  updatedAt: 'updated today'
+    width: 489,
+    height: 489
+  }
 };
 
-const secondProduct = {
+const secondProduct: DummyProduct = {
   id: '1',
-  handle: 'dummy handle',
   availableForSale: true,
   title: 'Quality black palms',
   description: 'Quality black palms',
-  descriptionHtml: '#',
-  options: [{ id: 'dummy handle 1', name: 'Option 1', values: ['value 1', 'value 2', 'value 3'] }],
   priceRange: {
     maxVariantPrice: {
       amount: '50000',
@@ -54,34 +38,19 @@ const secondProduct = {
       currencyCode: 'ngn'
     }
   },
-  variants: {
-    edges: [{ node: 'node 1' }]
-  },
   featuredImage: {
     url: '/hero.png',
     altText: 'alt text',
-    width: '489',
-    height: '489'
-  },
-  images: {
-    edges: [{ node: 'node 1' }]
-  },
-  seo: {
-    title: 'product 1',
-    description: 'dummy description'
-  },
-  tags: ['tag 1', 'tag 2'],
-  updatedAt: 'updated today'
+    width: 489,
+    height: 489
+  }
 };
 
-const thirdProduct = {
+const thirdProduct: DummyProduct = {
   id: '3',
-  handle: 'dummy handle 3',
   availableForSale: true,
   title: 'Normal black palms',
   description: 'Normal black palms',
-  descriptionHtml: '#',
-  options: [{ id: '1', name: 'Option 1', values: ['value 1', 'value 2', 'value 3'] }],
   priceRange: {
     maxVariantPrice: {
       amount: '25000',
@@ -92,25 +61,12 @@ const thirdProduct = {
       currencyCode: 'ngn'
     }
   },
-  variants: {
-    edges: [{ node: 'node 1' }]
-  },
   featuredImage: {
     url: '/palms.png',
     altText: 'alt text',
-    width: '489',
-    height: '489'
-  },
-  images: {
-    edges: [{ node: 'node 1' }]
-  },
-  seo: {
-    title: 'product 3',
-    description: 'dummy description'
-  },
-  tags: ['tag 1', 'tag 2'],
-  updatedAt: 'updated today',
-  edges: []
+    width: 489,
+    height: 489
+  }
 };
 
 export default async function getDummyProducts() {

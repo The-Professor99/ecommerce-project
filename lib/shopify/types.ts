@@ -263,3 +263,26 @@ export type ShopifyProductsOperation = {
     sortKey?: string;
   };
 };
+
+export type DummyProduct = {
+  id: string;
+  availableForSale: boolean;
+  title: string;
+  description: string;
+  priceRange: {
+    maxVariantPrice: {
+      amount: string;
+      currencyCode: 'ngn' | 'usd' | 'gbp';
+    };
+    minVariantPrice: {
+      amount: string;
+      currencyCode: 'ngn' | 'usd' | 'gbp';
+    };
+  };
+  featuredImage: {
+    url: string;
+    altText: string;
+    width: number;
+    height: number;
+  };
+};

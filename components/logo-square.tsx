@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import LogoIcon from './icons/logo';
+import Image from 'next/image';
 
 export default function LogoSquare({ size }: { size?: 'sm' | undefined }) {
   return (
@@ -12,12 +12,14 @@ export default function LogoSquare({ size }: { size?: 'sm' | undefined }) {
         }
       )}
     >
-      <LogoIcon
+      {/* <LogoIcon
         className={clsx({
           'h-[16px] w-[16px]': !size,
           'h-[10px] w-[10px]': size === 'sm'
         })}
-      />
+      /> */}
+
+      <Image src="/logo.png" alt="logo" width={32} height={28} className="rounded-lg bg-white" />
     </div>
   );
 }
