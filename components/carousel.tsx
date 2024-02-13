@@ -1,11 +1,12 @@
-import { getCollectionProducts } from 'lib/shopify';
+import getDummyProducts from 'lib/products';
 import Link from 'next/link';
 import { GridTileImage } from './grid/tile';
 
 export async function Carousel() {
   // Collections that start with `hidden-*` are hidden from the search page.
-  const products = await getCollectionProducts({ collection: 'hidden-homepage-carousel' });
+  // const products = await getCollectionProducts({ collection: 'hidden-homepage-carousel' });
 
+  const products = await getDummyProducts();
   if (!products?.length) return null;
 
   // Purposefully duplicating products to make the carousel loop and not run out of products on wide screens.
@@ -19,7 +20,8 @@ export async function Carousel() {
             key={`${product.handle}${i}`}
             className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3"
           >
-            <Link href={`/product/${product.handle}`} className="relative h-full w-full">
+            <Link href="#" className="relative h-full w-full">
+              {/* {`/product/${product.handle}`} */}
               <GridTileImage
                 alt={product.title}
                 label={{

@@ -1,6 +1,5 @@
 {
   "private": true,
-  "packageManager": "pnpm@8.2.0",
   "engines": {
     "node": ">=18",
     "pnpm": ">=7"
@@ -22,8 +21,13 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@mui/material": "^5.15.10",
+    "@mui/material-nextjs": "^5.15.9",
     "clsx": "^2.0.0",
     "geist": "^1.0.0",
     "next": "14.0.0",
